@@ -1,6 +1,6 @@
 //Random
 function Random(max, min=0){
-    return (Math.random()*(max+min)-min);
+    return (Math.random()*(max-min)+min);
     // Math.random gives a random between 0 and 1
     //  if we multiply it by our ceiling value (max+min)
     //  and then subtract the floor value (min),
@@ -16,7 +16,7 @@ function Random(max, min=0){
     // Even though, we got 1.0 from Math.random
     // we would NEVER achieve our desired maximum of 8
     // that's why we must also add min to our max
-    // (1.0 * (8+2))-2 = 8
+    // (1.0 * (8-(-2)))-2 = 8
     // which is exactly the behaviour we wanted to achieve
     
     //more examples:
